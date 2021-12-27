@@ -6,6 +6,25 @@ contract FunctionsExample {
 
     mapping(address => uint) public balanceReceived;
 
+    address payable owner;
+
+    constructor() {
+        owner = payable(msg.sender);
+    }
+
+    function getOwner() public view returns(address) {
+        return owner;
+    }
+
+    function convertWeiToEth(uint _amount) public pure returns(uint) {
+        return _amount / 1 ether;
+    }
+
+    function destroySmartContract() public {
+        require(msg.sender == owner, "You are not the owner");
+        selfdestruct(owner);
+    }
+
     function receiveMoney() public payable {
         assert(balanceReceived[msg.sender] + msg.value >= balanceReceived[msg.sender]);
         balanceReceived[msg.sender] += msg.value;
