@@ -17,4 +17,8 @@ contract FunctionsExample {
         balanceReceived[msg.sender] -= _amount;
         _to.transfer(_amount);
     } 
+
+    receive() external payable {
+        receiveMoney();
+    }
 }
