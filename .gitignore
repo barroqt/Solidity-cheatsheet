@@ -1,9 +1,12 @@
 inbox0.8.9/node_modules
 inbox0.8.9/package-lock.json
 inbox0.8.9/.vscode/
-lottery/node_modules
-lottery/package-lock.json
-lottery/.vscode/
+lottery/blockchain/node_modules
+lottery/blockchain/package-lock.json
+lottery/blockchain/.vscode/
+lottery/front/node_modules
+lottery/front/package-lock.json
+lottery/front/.vscode/
 node_modules
 package-lock.json
 .vscode
